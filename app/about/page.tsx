@@ -79,16 +79,6 @@ export default function About() {
                         </div>
                     </div>
 
-                    <div>
-                        <h2 className="text-2xl font-bold mb-6 flex items-center">
-                            <GraduationCap className="mr-3 text-purple-500" /> Education
-                        </h2>
-                        <div className="p-6 rounded-xl glass hover:border-primary/50 transition-colors">
-                            <h3 className="text-lg font-bold">Computer Science</h3>
-                            <p className="text-muted-foreground">B.Sc. Degree</p>
-                            <p className="text-sm text-muted-foreground mt-2">University / Tech Institute</p>
-                        </div>
-                    </div>
                 </div>
             </motion.div>
         </div>
