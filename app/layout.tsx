@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import React from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,8 +21,6 @@ export const metadata: Metadata = {
   title: "Mustakheem Olamilekan Amoo | Full Stack Developer",
   description: "Portfolio of Mustakheem Olamilekan Amoo, a Full Stack Developer specializing in Next.js, React, and Modern Web Technologies.",
 };
-
-import { ThemeProvider } from "@/components/theme-provider";
 
 export default function RootLayout({
   children,
