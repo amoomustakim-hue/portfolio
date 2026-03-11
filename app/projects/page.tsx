@@ -33,7 +33,7 @@ export default function Projects() {
         <div className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div className="text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h1>
-                <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                     A selection of my best work, spanning from complex web applications to beautiful landing pages.
                 </p>
             </div>
@@ -46,29 +46,29 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
                         viewport={{ once: true }}
-                        className="group relative glass rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all hover:-translate-y-2 duration-300"
+                        className="group relative glass rounded-2xl overflow-hidden hover:border-primary/50 transition-all hover:-translate-y-2 duration-300"
                     >
                         {/* Project Image Placeholder */}
-                        <div className="aspect-video bg-neutral-800 relative overflow-hidden">
-                            <div className="absolute inset-0 flex items-center justify-center text-neutral-600">
+                        <div className="aspect-video bg-muted relative overflow-hidden">
+                            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground/50">
                                 <Code className="w-12 h-12 opacity-50" />
                             </div>
-                            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
-                                <a href={project.links.github} className="p-3 bg-white/10 rounded-full hover:bg-white/20 hover:scale-110 transition-all">
-                                    <Github className="w-6 h-6 text-white" />
+                            <div className="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                                <a href={project.links.github} className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 hover:scale-110 transition-all text-primary">
+                                    <Github className="w-6 h-6" />
                                 </a>
-                                <a href={project.links.live} className="p-3 bg-indigo-600 rounded-full hover:bg-indigo-500 hover:scale-110 transition-all">
-                                    <ExternalLink className="w-6 h-6 text-white" />
+                                <a href={project.links.live} className="p-3 bg-primary rounded-full hover:bg-primary/90 hover:scale-110 transition-all text-primary-foreground">
+                                    <ExternalLink className="w-6 h-6" />
                                 </a>
                             </div>
                         </div>
 
                         <div className="p-6">
-                            <h3 className="text-xl font-bold mb-2 group-hover:text-indigo-400 transition-colors">{project.title}</h3>
-                            <p className="text-gray-400 text-sm mb-4 line-clamp-3">{project.desc}</p>
+                            <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                            <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.desc}</p>
                             <div className="flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="text-xs px-2 py-1 rounded-md bg-white/5 text-gray-300 border border-white/5">
+                                    <span key={tag} className="text-xs px-2 py-1 rounded-md bg-primary/5 text-primary border border-primary/10">
                                         {tag}
                                     </span>
                                 ))}

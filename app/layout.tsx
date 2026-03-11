@@ -20,19 +20,28 @@ export const metadata: Metadata = {
   description: "Portfolio of Mustakheem Olamilekan Amoo, a Full Stack Developer specializing in Next.js, React, and Modern Web Technologies.",
 };
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
-      <body className="bg-black text-white antialiased selection:bg-indigo-500/30">
-        <Navbar />
-        <main className="pt-16 min-h-screen">
-          {children}
-        </main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
+      <body className="bg-background text-foreground antialiased selection:bg-primary/30">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

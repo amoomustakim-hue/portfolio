@@ -26,8 +26,8 @@ export default function Skills() {
         <div className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div className="text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">Technical Skills</h1>
-                <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                    My technical toolbelt for bringing ideas to life. I m constantly learning and adapting to new technologies.
+                <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                    My technical toolbelt for bringing ideas to life. I'm constantly learning and adapting to new technologies.
                 </p>
             </div>
 
@@ -52,7 +52,7 @@ export default function Skills() {
                             {category.skills.map((skill) => (
                                 <span
                                     key={skill}
-                                    className="px-3 py-1.5 text-sm rounded-full bg-white/5 border border-white/5 text-gray-300 hover:text-white hover:bg-white/10 transition-colors cursor-default"
+                                    className="px-3 py-1.5 text-sm rounded-full bg-primary/10 border border-primary/20 text-foreground hover:bg-primary/20 transition-colors cursor-default"
                                 >
                                     {skill}
                                 </span>

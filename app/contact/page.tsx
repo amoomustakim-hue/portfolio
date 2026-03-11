@@ -41,23 +41,22 @@ export default function Contact() {
                 <p className="text-gray-400">Have a project in mind? Send me a message and I'll get back to you shortly.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="grid md:grid-cols-3 gap-8 mb-16 px-4">
                 {/* Contact Info Cards */}
-                <div className="p-6 bg-white/5 rounded-xl border border-white/10 text-center">
-                    <div className="mx-auto w-12 h-12 bg-indigo-500/10 rounded-full flex items-center justify-center mb-4">
-                        <Mail className="text-indigo-400" />
+                <div className="p-6 glass rounded-xl text-center hover:border-primary/50 transition-colors">
+                    <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
+                        <Mail />
                     </div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-sm text-gray-400">amoomustakim@gmail.com</p>
+                    <p className="text-sm text-muted-foreground">amoomustakim@gmail.com</p>
                 </div>
-                {/* Add more info cards if needed (Phone, Location) */}
             </div>
 
             <motion.form
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 onSubmit={handleSubmit}
-                className="space-y-6 bg-white/5 p-8 rounded-2xl border border-white/10"
+                className="space-y-6 glass p-8 rounded-2xl border-none shadow-xl mb-24 mx-4"
             >
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -115,7 +114,7 @@ export default function Contact() {
                 <button
                     type="submit"
                     disabled={status === "loading" || status === "success"}
-                    className="w-full py-4 bg-indigo-600 rounded-lg font-bold text-white hover:bg-indigo-500 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/90 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                     {status === "loading" ? (
                         <Loader2 className="animate-spin" />
@@ -127,7 +126,7 @@ export default function Contact() {
                 </button>
 
                 {status === "error" && (
-                    <p className="text-red-400 text-center text-sm">Something went wrong. Please try again or email directly.</p>
+                    <p className="text-destructive text-center text-sm">Something went wrong. Please try again or email directly.</p>
                 )}
             </motion.form>
         </div>

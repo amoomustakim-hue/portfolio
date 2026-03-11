@@ -27,13 +27,13 @@ export default function About() {
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                            <h3 className="text-3xl font-bold text-indigo-400">40+</h3>
-                            <p className="text-sm text-gray-400">Projects Completed</p>
+                        <div className="p-4 rounded-xl glass">
+                            <h3 className="text-3xl font-bold text-primary">10+</h3>
+                            <p className="text-sm text-muted-foreground">Projects Completed</p>
                         </div>
-                        <div className="p-4 rounded-xl bg-white/5 border border-white/10">
-                            <h3 className="text-3xl font-bold text-purple-400">100%</h3>
-                            <p className="text-sm text-gray-400">Client Satisfaction</p>
+                        <div className="p-4 rounded-xl glass">
+                            <h3 className="text-3xl font-bold text-primary">1.5</h3>
+                            <p className="text-sm text-muted-foreground">Years Experience</p>
                         </div>
                     </div>
                 </div>
@@ -83,12 +83,10 @@ export default function About() {
                         <h2 className="text-2xl font-bold mb-6 flex items-center">
                             <GraduationCap className="mr-3 text-purple-500" /> Education
                         </h2>
-                        <div className="space-y-6">
-                            <div className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-colors">
-                                <h3 className="text-lg font-bold">Computer Science</h3>
-                                <p className="text-gray-400">B.Sc. Degree</p>
-                                <p className="text-sm text-gray-500 mt-2">University / Tech Institute</p>
-                            </div>
+                        <div className="p-6 rounded-xl glass hover:border-primary/50 transition-colors">
+                            <h3 className="text-lg font-bold">Computer Science</h3>
+                            <p className="text-muted-foreground">B.Sc. Degree</p>
+                            <p className="text-sm text-muted-foreground mt-2">University / Tech Institute</p>
                         </div>
                     </div>
                 </div>
