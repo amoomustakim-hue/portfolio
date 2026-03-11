@@ -46,7 +46,7 @@ export default function Projects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
                         viewport={{ once: true }}
-                        className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all hover:-translate-y-1"
+                        className="group relative glass rounded-2xl overflow-hidden hover:border-indigo-500/50 transition-all hover:-translate-y-2 duration-300"
                     >
                         {/* Project Image Placeholder */}
                         <div className="aspect-video bg-neutral-800 relative overflow-hidden">

@@ -43,10 +43,10 @@ export default function About() {
                     <div>
                         <h1 className="text-4xl font-bold mb-4">About Me</h1>
                         <p className="text-gray-400 leading-relaxed text-lg">
-                            I am <span className="text-white font-medium">Mustakheem Olamilekan Amoo</span>, a passionate Full Stack Developer with deep expertise in building scalable web applications.
-                            My journey started with a curiosity for how things work on the internet, which quickly evolved into a career crafting professional digital solutions.
+                            I am <span className="text-white font-medium">Mustakheem Olamilekan Amoo</span>, a focused <span className="text-indigo-400">Junior Full Stack Developer</span> with 1.5 years of hands-on experience building modern web applications.
+                            I thrive on solving complex problems and turning creative ideas into functional, high-performance digital products.
                             <br /><br />
-                            I specialize in the <span className="text-indigo-400">MERN Stack (MongoDB, Express, React, Node.js)</span> and Next.js, creating seamless user experiences backed by robust architecture.
+                            I specialize in the <span className="text-indigo-400">MERN Stack</span> and Next.js, with a strong commitment to writing clean code and continuously learning new technologies to deliver better user experiences.
                         </p>
                     </div>
 
@@ -57,16 +57,16 @@ export default function About() {
                         <div className="space-y-8 pl-4 border-l-2 border-white/10">
                             {[
                                 {
-                                    role: "Senior Full Stack Developer",
-                                    company: "Freelance / Self-Employed",
-                                    period: "2023 - Present",
-                                    desc: "Leading development of high-performance web applications for global clients."
+                                    role: "Full Stack Developer",
+                                    company: "Freelance",
+                                    period: "2024 - Present",
+                                    desc: "Developing responsive and interactive web applications using React and Node.js for various clients."
                                 },
                                 {
-                                    role: "Frontend Developer Intern",
-                                    company: "Tech Startups",
-                                    period: "2021 - 2022",
-                                    desc: "Collaborated with cross-functional teams to build responsive UI components."
+                                    role: "Frontend Developer",
+                                    company: "Tech Project Collaboration",
+                                    period: "2023 - 2024",
+                                    desc: "Built and optimized user interfaces, ensuring seamless cross-browser compatibility and performance."
                                 }
                             ].map((job, idx) => (
                                 <div key={idx} className="relative pl-8">

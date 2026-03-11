@@ -39,7 +39,7 @@ export default function Skills() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: idx * 0.1 }}
                         viewport={{ once: true }}
-                        className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-indigo-500/30 transition-colors"
+                        className="p-8 glass rounded-2xl hover:border-indigo-500/50 transition-all duration-300"
                     >
                         <div className="flex items-center gap-3 mb-6">
                             <div className="p-3 bg-white/5 rounded-lg">
