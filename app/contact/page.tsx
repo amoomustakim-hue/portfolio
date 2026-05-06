@@ -1,134 +1,135 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Loader2, Send } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Contact() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-    });
-    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setStatus("loading");
-
-        try {
-            const res = await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
-            });
-
-            if (!res.ok) throw new Error("Failed to send");
-
-            setStatus("success");
-            setFormData({ name: "", email: "", subject: "", message: "" });
-        } catch (error) {
-            console.error(error);
-            setStatus("error");
-        }
-    };
-
     return (
-        <div className="min-h-screen pt-24 px-4 max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-                <h1 className="text-3xl md:text-5xl font-bold mb-4">Let's Work Together</h1>
-                <p className="text-gray-400">Have a project in mind? Send me a message and I'll get back to you shortly.</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-16 px-4">
-                {/* Contact Info Cards */}
-                <div className="p-6 glass rounded-xl text-center hover:border-primary/50 transition-colors">
-                    <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
-                        <Mail />
-                    </div>
-                    <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-sm text-muted-foreground">amoomustakim@gmail.com</p>
-                </div>
-            </div>
-
-            <motion.form
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                onSubmit={handleSubmit}
-                className="space-y-6 glass p-8 rounded-2xl border-none shadow-xl mb-24 mx-4"
-            >
-                <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                        <label htmlFor="name">Name</label>
-                        <input
-                            id="name"
-                            required
-                            type="text"
-                            placeholder="Your name"
-                            className="w-full"
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        />
-                    </div>
-                    <div className="space-y-2">
-                        <label htmlFor="email">Email</label>
-                        <input
-                            id="email"
-                            required
-                            type="email"
-                            placeholder="your@email.com"
-                            className="w-full"
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        />
-                    </div>
-                </div>
-
-                <div className="space-y-2">
-                    <label htmlFor="subject">Subject</label>
-                    <input
-                        id="subject"
-                        required
-                        type="text"
-                        placeholder="Project inquiry..."
-                        className="w-full"
-                        value={formData.subject}
-                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    />
-                </div>
-
-                <div className="space-y-2">
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                        id="message"
-                        required
-                        rows={5}
-                        placeholder="Tell me about your project..."
-                        className="w-full resize-none"
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    />
-                </div>
-
-                <button
-                    type="submit"
-                    disabled={status === "loading" || status === "success"}
-                    className="w-full py-4 bg-primary text-primary-foreground rounded-lg font-bold hover:bg-primary/90 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+        <div className="min-h-screen py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+            
+            {/* Header Section */}
+            <div className="max-w-3xl mb-32 pt-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-[10px] text-primary tracking-widest uppercase font-bold mb-6"
                 >
-                    {status === "loading" ? (
-                        <Loader2 className="animate-spin" />
-                    ) : status === "success" ? (
-                        "Message Sent!"
-                    ) : (
-                        <>Send Message <Send className="w-4 h-4" /></>
-                    )}
-                </button>
+                    AVAILABLE FOR INQUIRIES
+                </motion.div>
+                
+                <motion.h1 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
+                    className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-tight leading-[1.1]"
+                >
+                    LET'S BUILD <br />
+                    SOMETHING <br />
+                    EXTRAORDINARY
+                </motion.h1>
+            </div>
 
-                {status === "error" && (
-                    <p className="text-destructive text-center text-sm">Something went wrong. Please try again or email directly.</p>
-                )}
-            </motion.form>
+            <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
+                
+                {/* Left Side: Image and Details */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="space-y-16"
+                >
+                    <div className="aspect-[3/4] relative w-full max-w-md bg-zinc-900 grayscale hover:grayscale-0 transition-all duration-700">
+                        <Image
+                            src="/profile.png"
+                            alt="Mustakheem"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+
+                    <div className="space-y-12 max-w-md">
+                        <div>
+                            <h3 className="text-[10px] tracking-widest text-muted-foreground uppercase mb-6">SOCIAL CHANNELS</h3>
+                            <ul className="space-y-4">
+                                <li>
+                                    <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex items-center justify-between group border-b border-white/10 pb-4">
+                                        <span className="text-sm">LinkedIn</span>
+                                        <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/coded-devs" target="_blank" rel="noreferrer" className="flex items-center justify-between group border-b border-white/10 pb-4">
+                                        <span className="text-sm">GitHub</span>
+                                        <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank" rel="noreferrer" className="flex items-center justify-between group border-b border-white/10 pb-4">
+                                        <span className="text-sm">Instagram</span>
+                                        <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-white transition-colors" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 className="text-[10px] tracking-widest text-muted-foreground uppercase mb-6">STUDIO LOCATION</h3>
+                            <div className="text-sm text-white/80 space-y-2">
+                                <p>Lagos — Global Operations</p>
+                                <p>Remote Selective Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Right Side: Form */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="lg:pl-12 pt-8 lg:pt-0"
+                >
+                    <form className="space-y-12">
+                        <div className="space-y-2">
+                            <label className="text-[10px] tracking-widest text-muted-foreground uppercase block">FULL NAME</label>
+                            <input 
+                                type="text" 
+                                placeholder="John Doe"
+                                className="w-full bg-transparent border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors rounded-none px-0"
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] tracking-widest text-muted-foreground uppercase block">SERVICE OF INTEREST</label>
+                            <input 
+                                type="text" 
+                                placeholder="Technical Architecture / Full Stack Development"
+                                className="w-full bg-transparent border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors rounded-none px-0"
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <label className="text-[10px] tracking-widest text-muted-foreground uppercase block">PROJECT BRIEF</label>
+                            <textarea 
+                                rows={6}
+                                placeholder="Tell us about your vision..."
+                                className="w-full bg-transparent border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors resize-none rounded-none px-0"
+                            ></textarea>
+                        </div>
+
+                        <div className="flex items-center gap-6 pt-8">
+                            <span className="text-[10px] tracking-widest uppercase font-bold">SEND INQUIRY</span>
+                            <div className="w-8 h-[1px] bg-primary"></div>
+                            <button type="submit" className="bg-white text-black px-6 py-2 text-[10px] tracking-widest uppercase font-bold hover:bg-white/90 transition-colors">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </form>
+                </motion.div>
+
+            </div>
         </div>
     );
 }

@@ -1,66 +1,98 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Database, Wrench } from "lucide-react";
+
+const skillsData = [
+    {
+        title: "Mobile App Development",
+        desc: "Building intuitive mobile interfaces and component-based architectures for iOS and Android.",
+        skills: ["REACT NATIVE", "MOBILE UI IMPLEMENTATION", "COMPONENT ARCHITECTURE", "NAVIGATION FLOWS", "RESPONSIVE LAYOUTS"]
+    },
+    {
+        title: "Web App Development",
+        desc: "Crafting responsive, high-performance web applications with modern frontend frameworks.",
+        skills: ["REACT.JS", "NEXT.JS", "JAVASCRIPT / TYPESCRIPT", "HTML5 & CSS3", "RESPONSIVE WEB DESIGN"]
+    },
+    {
+        title: "Backend & Logic",
+        desc: "Developing robust server-side logic, automation scripting, and system integrations.",
+        skills: ["PYTHON", "NODE.JS", "EXPRESS", "API INTEGRATION", "DATA HANDLING"]
+    },
+    {
+        title: "AI & Product Thinking",
+        desc: "Designing AI-powered solutions and prompt-driven product architectures.",
+        skills: ["AI ASSISTANT WORKFLOWS", "PROMPT ENGINEERING", "VOICE / SMS / USSD AI", "SOCIAL COMMERCE LOGIC"]
+    },
+    {
+        title: "UI/UX & Creative Direction",
+        desc: "Executing brand-focused product design, visual storytelling, and motion graphics.",
+        skills: ["PRODUCT DESIGN THINKING", "MOTION GRAPHICS", "VISUAL STORYTELLING", "USER FLOW PLANNING"]
+    }
+];
 
 export default function Skills() {
-    const skillCategories = [
-        {
-            title: "Frontend Development",
-            icon: <Code2 className="w-6 h-6 text-indigo-400" />,
-            skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "HTML5/CSS3", "Redux"]
-        },
-        {
-            title: "Backend Development",
-            icon: <Database className="w-6 h-6 text-purple-400" />,
-            skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs", "GraphQL", "Firebase"]
-        },
-        {
-            title: "Tools & DevOps",
-            icon: <Wrench className="w-6 h-6 text-pink-400" />,
-            skills: ["Git/GitHub", "Docker", "AWS", "Vercel", "Jest", "Figma", "VS Code"]
-        }
-    ];
-
     return (
-        <div className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Technical Skills</h1>
-                <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-                    My technical toolbelt for bringing ideas to life. I'm constantly learning and adapting to new technologies.
-                </p>
+        <div className="min-h-screen py-32 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+            
+            {/* Header Section */}
+            <div className="max-w-3xl mb-32 pt-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-[10px] text-primary tracking-widest uppercase font-bold mb-6"
+                >
+                    TECHNICAL CAPABILITIES
+                </motion.div>
+                
+                <motion.h1 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
+                    className="text-5xl md:text-7xl lg:text-8xl font-serif tracking-tight leading-[1.1] mb-8"
+                >
+                    THE STACK OF <br />
+                    INNOVATION.
+                </motion.h1>
+
+                <motion.p 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed"
+                >
+                    A comprehensive toolkit spanning mobile engineering, full-stack web development, and AI-powered product execution. I select the right tool for the specific problem, ensuring scalable, secure, and elegant outcomes.
+                </motion.p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {skillCategories.map((category, idx) => (
+            {/* Skills Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12 mb-32 border-t border-white/10 pt-20">
+                {skillsData.map((category, idx) => (
                     <motion.div
                         key={idx}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.1 }}
+                        transition={{ delay: idx * 0.1, duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="p-8 glass rounded-2xl hover:border-indigo-500/50 transition-all duration-300"
+                        className="flex flex-col"
                     >
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="p-3 bg-white/5 rounded-lg">
-                                {category.icon}
-                            </div>
-                            <h3 className="text-xl font-bold">{category.title}</h3>
-                        </div>
-
-                        <div className="flex flex-wrap gap-3">
-                            {category.skills.map((skill) => (
-                                <span
-                                    key={skill}
-                                    className="px-3 py-1.5 text-sm rounded-full bg-primary/10 border border-primary/20 text-foreground hover:bg-primary/20 transition-colors cursor-default"
-                                >
+                        <h3 className="text-2xl font-serif mb-4 tracking-wide">{category.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-[280px]">
+                            {category.desc}
+                        </p>
+                        
+                        <ul className="space-y-4 border-t border-white/10 pt-8">
+                            {category.skills.map((skill, sIdx) => (
+                                <li key={sIdx} className="text-[9px] tracking-widest text-white uppercase flex items-center gap-3">
+                                    <div className="w-1.5 h-1.5 bg-primary rounded-none"></div>
                                     {skill}
-                                </span>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
                     </motion.div>
                 ))}
             </div>
+
         </div>
     );
 }
