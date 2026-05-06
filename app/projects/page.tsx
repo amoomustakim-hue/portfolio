@@ -35,7 +35,7 @@ const projects = [
         category: "MOBILE APP — COMING SOON",
         desc: "An artisan-to-client mobile platform designed to help users quickly and reliably find trusted local service providers like electricians and plumbers.",
         links: { live: "#", github: "#" },
-        image: "/naijahire.png",
+        image: "/naijahire.jpg",
         layout: "full"
     },
 ];
