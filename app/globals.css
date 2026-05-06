@@ -92,32 +92,4 @@ body {
   background: var(--muted-foreground);
 }
 
-/* Form Styles */
-input,
-textarea {
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-  color: var(--foreground);
-  transition: all 0.2s;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--primary);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: var(--muted-foreground);
-}
-
-label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--muted-foreground);
-  margin-bottom: 0.25rem;
-}
+/* Form Styles removed to allow Tailwind utilities to control input aesthetics */

@@ -97,7 +97,7 @@ export default function Contact() {
                             <input 
                                 type="text" 
                                 placeholder="John Doe"
-                                className="w-full bg-transparent border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors rounded-none px-0"
+                                className="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:ring-0 focus:border-white transition-colors rounded-none px-0"
                             />
                         </div>
 
@@ -106,7 +106,7 @@ export default function Contact() {
                             <input 
                                 type="text" 
                                 placeholder="Technical Architecture / Full Stack Development"
-                                className="w-full bg-transparent border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors rounded-none px-0"
+                                className="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:ring-0 focus:border-white transition-colors rounded-none px-0"
                             />
                         </div>
 
@@ -115,7 +115,7 @@ export default function Contact() {
                             <textarea 
                                 rows={6}
                                 placeholder="Tell us about your vision..."
-                                className="w-full bg-transparent border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors resize-none rounded-none px-0"
+                                className="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-white/20 pb-4 text-white placeholder:text-white/30 focus:outline-none focus:ring-0 focus:border-white transition-colors resize-none rounded-none px-0"
                             ></textarea>
                         </div>
 
