@@ -7,6 +7,14 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
     {
+        title: "RENTIFY RECEIPTS",
+        category: "WEB APPLICATION — 2026",
+        desc: "A professional rent receipt generator that allows users to create, preview, and download custom rent receipts. Built with Next.js and Tailwind CSS for a seamless user experience.",
+        links: { live: "https://rentifyreceipts.vercel.app", github: "#" },
+        image: "/rentify.png",
+        layout: "full"
+    },
+    {
         title: "TWIZRR",
         category: "SOCIAL-COMMERCE APP — IN DEVELOPMENT",
         desc: "A modern African social-commerce platform enabling sellers to create digital stores, receive payments securely, and build trust through escrow-powered commerce.",

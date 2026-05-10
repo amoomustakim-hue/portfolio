@@ -2,24 +2,28 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const featuredProjects = [
+    {
+        title: "RENTIFY RECEIPTS",
+        category: "WEB APPLICATION — 2026",
+        link: "/projects",
+        image: "/rentify.png",
+        layout: "full"
+    },
     {
         title: "DIAL AI",
         category: "AI HEALTHCARE ASSISTANT — 2024",
         link: "/projects",
-        layout: "full" // Takes full width
+        image: "/dialai.png",
+        layout: "half"
     },
     {
         title: "ROCK PAPER SCISSORS",
         category: "PYTHON DESKTOP GAME — 2024",
         link: "/projects",
-        layout: "half"
-    },
-    {
-        title: "NAIJA HIRE",
-        category: "MOBILE APP — 2025",
-        link: "/projects",
+        image: null,
         layout: "half"
     }
 ];
@@ -66,9 +70,15 @@ export default function FeaturedProjects() {
                         className={`group flex flex-col cursor-pointer ${project.layout === 'full' ? 'md:col-span-2' : 'col-span-1'}`}
                     >
                         <Link href={project.link}>
-                            {/* Placeholder for the user to add their image */}
-                            <div className={`w-full bg-zinc-900 overflow-hidden mb-6 ${project.layout === 'full' ? 'aspect-[21/9]' : 'aspect-square md:aspect-[4/5]'}`}>
-                                {/* User will replace this div with their actual <Image /> component */}
+                            <div className={`w-full bg-zinc-900 relative overflow-hidden mb-6 ${project.layout === 'full' ? 'aspect-[21/9]' : 'aspect-square md:aspect-[4/5]'}`}>
+                                {project.image && (
+                                    <Image 
+                                        src={project.image} 
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                )}
                             </div>
                             
                             <div>
