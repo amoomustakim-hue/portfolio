@@ -49,7 +49,8 @@ export function About() {
           tl.fromTo(notes[i], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.2 }, i - 0.1)
         }
         if (i < words.length - 1) {
-          tl.fromTo(chars, { yPercent: 0 }, { yPercent: -105, stagger: 0.02, duration: 0.3, ease: 'power3.in', immediateRender: false }, i + 0.55)
+          // Exit well past the mask's accent headroom (0.32em) so no letter bottoms linger.
+          tl.fromTo(chars, { yPercent: 0 }, { yPercent: -170, stagger: 0.02, duration: 0.3, ease: 'power3.in', immediateRender: false }, i + 0.55)
           tl.to(notes[i], { opacity: 0, duration: 0.15 }, i + 0.55)
         }
       })
