@@ -105,7 +105,7 @@ export function Hero({ ready }: { ready: boolean }) {
         <div className="hero__bottom">
           <Mask className="meta hero__roles" lines={IDENTITY.roles} />
           <p className="hero__lede">
-            <Mask lines={['Design, code and motion —', 'products and experiences', 'built from Lagos.']} />
+            <Mask lines={['Design, frontend, backend, mobile —', 'products and experiences', 'built from Lagos.']} />
           </p>
           <p className="hero__cue meta">
             Scroll to explore <span aria-hidden="true">↓</span>

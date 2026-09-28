@@ -2,14 +2,15 @@ import { lazy, Suspense } from 'react'
 import { useIsMobile, useReducedMotion } from '../../hooks/useMediaQuery'
 import type { Project } from '../../projects'
 import { AfterDarkScene } from './AfterDarkScene'
-import { CravvingssScene } from './CravvingssScene'
 import { NoirScene } from './NoirScene'
 import { ShanghaiScene } from './ShanghaiScene'
+import { WackowrldScene } from './WackowrldScene'
 import type { SceneProps } from './types'
 
 // Three.js scenes are split out of the main bundle and only load when shown.
 const AuraScene = lazy(() => import('./AuraScene'))
 const SomaScene = lazy(() => import('./SomaScene'))
+const CravvingssScene = lazy(() => import('./CravvingssScene'))
 
 const base = import.meta.env.BASE_URL
 
@@ -21,7 +22,7 @@ export function Scene({ project, playing, variant }: { project: Project } & Scen
   const reduced = useReducedMotion()
   const mobile = useIsMobile()
   const live = playing && !reduced
-  const webgl = project.scene === 'aura' || project.scene === 'soma'
+  const webgl = project.scene === 'aura' || project.scene === 'soma' || project.scene === 'cravvingss'
 
   if (webgl && (reduced || mobile)) {
     return (
@@ -35,15 +36,16 @@ export function Scene({ project, playing, variant }: { project: Project } & Scen
   switch (project.scene) {
     case 'shanghai':
       return <ShanghaiScene {...props} />
-    case 'cravvingss':
-      return <CravvingssScene {...props} />
+    case 'wackowrld':
+      return <WackowrldScene {...props} />
     case 'noir':
       return <NoirScene {...props} />
     case 'afterDark':
       return <AfterDarkScene {...props} />
     case 'aura':
-    case 'soma': {
-      const Lazy = project.scene === 'aura' ? AuraScene : SomaScene
+    case 'soma':
+    case 'cravvingss': {
+      const Lazy = project.scene === 'aura' ? AuraScene : project.scene === 'soma' ? SomaScene : CravvingssScene
       return (
         <Suspense fallback={<div className={`scene scene--${project.scene} scene--${variant}`} />}>
           <Lazy {...props} />

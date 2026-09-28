@@ -7,7 +7,7 @@ export const IDENTITY = {
   location: 'Lagos, Nigeria',
   coords: '6°27′N / 3°24′E',
   timeZone: 'Africa/Lagos',
-  roles: ['Creative Developer', 'UI/UX Designer', 'Motion Designer', 'Founder'],
+  roles: ['Creative Developer', 'UI/UX Designer', 'Backend Developer', 'Mobile App Developer', 'Motion Designer', 'Founder'],
   email: 'amoomustakim@gmail.com',
 }
 
@@ -42,16 +42,26 @@ export const CAPABILITIES = [
   },
   {
     index: '02',
+    title: ['Backend'],
+    items: ['Node.js', 'NestJS', 'Python', 'PostgreSQL', 'MongoDB', 'Prisma', 'Supabase', 'APIs & payments'],
+  },
+  {
+    index: '03',
+    title: ['Mobile'],
+    items: ['App design', 'App development', 'iOS & Android', 'Chat-native products'],
+  },
+  {
+    index: '04',
     title: ['Design'],
     items: ['UI/UX', 'Visual Design', 'Interaction Design', 'Art Direction'],
   },
   {
-    index: '03',
+    index: '05',
     title: ['Motion'],
     items: ['Motion Graphics', 'Animation', 'Interactive Motion'],
   },
   {
-    index: '04',
+    index: '06',
     title: ['Product'],
     items: ['Product Design', 'Prototyping', 'Startup Development'],
   },
