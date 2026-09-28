@@ -1,4 +1,4 @@
-export type SceneKey = 'shanghai' | 'cravvingss' | 'aura' | 'noir' | 'soma' | 'afterDark'
+export type SceneKey = 'shanghai' | 'cravvingss' | 'wackowrld' | 'aura' | 'noir' | 'soma' | 'afterDark'
 
 /** How the gallery leaves this project for the next one. */
 export type Exit = 'stretch' | 'expand' | 'slide' | 'shutter' | 'collapse'
@@ -10,6 +10,8 @@ export type Block =
   | { type: 'specs'; label: string; items: [string, string][] }
   | { type: 'flow' }
   | { type: 'launch'; href: string; label: string }
+  /** A screenshot of a live site in a minimal browser frame, linking out. */
+  | { type: 'site'; image: string; href: string; url: string; caption: string }
 
 export type Project = {
   slug: string
@@ -31,5 +33,7 @@ export type Project = {
   exit: Exit
   /** Projects that open an external experience instead of a case study. */
   external?: string
+  /** A live site to link to from the gallery and the case study. */
+  live?: string
   blocks: Block[]
 }

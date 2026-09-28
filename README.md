@@ -32,13 +32,16 @@ Deploys to Vercel as-is (`vercel.json` sets the Vite build, SPA rewrites for
 | # | Project | Visual | Status |
 | --- | --- | --- | --- |
 | 01 | **Shanghai**, City Archive / 001 | The real timelapse; opens the live site | Live |
-| 02 | **Cravvingss**, chat-native food delivery | Phone running the actual order flow, illustrated dishes | In development |
-| 03 | **Aura**, fragrance flagship | Real-time glass bottle (transmission, brass cap) refracting its backdrop | Concept |
-| 04 | **Noir**, automotive reveal | Light-painted SVG coupe, road streaks | Concept |
-| 05 | **Sōma**, architecture studio | Real-time concrete massing, moving sun, soft shadows | Concept |
-| 06 | **After Dark**, artist world | Audio-reactive canvas, synthesised Web Audio loop | Concept |
+| 02 | **Cravvingss**, the whole food business in one chat ([cravvingss.shop](https://cravvingss.shop)) | 3D phone running the real WhatsApp order thread, with the site's payment and rider cards | Live, Yaba |
+| 03 | **Wackowrld**, streetwear ([wackowrld.shop](https://wackowrld.shop)) | The live site's hero, with a VHS-style push-in | Live |
+| 04 | **Aura**, fragrance flagship | Real-time glass bottle (transmission, brass cap) refracting its backdrop | Concept |
+| 05 | **Noir**, automotive reveal | Light-painted SVG coupe, road streaks | Concept |
+| 06 | **Sōma**, architecture studio | Real-time concrete massing, moving sun, soft shadows | Concept |
+| 07 | **After Dark**, artist world | Audio-reactive canvas, synthesised Web Audio loop | Concept |
 
-Everything except the Shanghai footage and the portrait is generated in code.
+Cravvingss and Wackowrld use screenshots of the live sites. The Cravvingss
+phone screen is drawn from the product's real WhatsApp messages. Everything
+else, apart from the Shanghai footage and the portrait, is generated in code.
 There are no stock images. Fictional studies are labelled **Concept**
 throughout.
 

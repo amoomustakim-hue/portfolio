@@ -113,8 +113,8 @@ export function About() {
             lines={[`I’m ${IDENTITY.name} — a creative developer`, 'and designer from Lagos, Nigeria.']}
           />
           <p className="about__bio-body">
-            I build digital products, interactive experiences and visual systems where technology meets storytelling. Founder of
-            Cravvingss. Also known as {IDENTITY.alias}.
+            I design and build digital products end to end — interfaces, backends and mobile apps — alongside interactive experiences and
+            visual systems where technology meets storytelling. Founder of Cravvingss. Also known as {IDENTITY.alias}.
           </p>
         </div>
       </div>

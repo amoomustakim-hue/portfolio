@@ -153,6 +153,23 @@ function BlockView({ block: b, project: p }: { block: Block; project: Project })
       )
     case 'flow':
       return <FlowBlock />
+    case 'site':
+      return (
+        <section className="cblock cblock-site" data-theme={theme}>
+          <a href={b.href} target="_blank" rel="noreferrer" className="browser" data-cursor={'Visit\nsite'}>
+            <span className="browser__bar" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <span className="browser__url">{b.url}</span>
+            </span>
+            <img src={b.image} alt={b.caption} loading="lazy" decoding="async" />
+          </a>
+          <p className="meta dim cblock-site__caption">
+            {b.caption} <a href={b.href} target="_blank" rel="noreferrer">{b.url} ↗</a>
+          </p>
+        </section>
+      )
     case 'launch':
       return (
         <section className="cblock cblock-launch" data-theme={theme}>
@@ -160,13 +177,16 @@ function BlockView({ block: b, project: p }: { block: Block; project: Project })
             href={b.href}
             data-cursor="Enter"
             onClick={(e) => {
+              if (!p.external) return
               e.preventDefault()
               expandFrom(e.currentTarget.getBoundingClientRect(), '#000', b.label).then(() => {
                 window.location.href = b.href
               })
             }}
+            target={p.external ? undefined : '_blank'}
+            rel={p.external ? undefined : 'noreferrer'}
           >
-            <span className="meta dim">Live experience ↗</span>
+            <span className="meta dim">{p.external ? 'Live experience' : 'Live site'} ↗</span>
             <span className="cblock-launch__label">{b.label}</span>
           </a>
         </section>
@@ -211,7 +231,7 @@ function FlowBlock() {
       <div className="cblock-flow__device">
         <div className="phone phone--static">
           <div className="phone__screen">
-            <ChatThread step={STEPS[step].upTo} playing />
+            <ChatThread step={STEPS[step].upTo} />
           </div>
         </div>
       </div>

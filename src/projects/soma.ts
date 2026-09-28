@@ -14,7 +14,7 @@ export const soma: Project = {
   statement: 'Architecture is the play of light on mass. So the site renders its own concrete, and lets the sun move across it while you read.',
   palette: { bg: '#d9d3c7', fg: '#1b1a17', accent: '#7c6f5d' },
   tone: 'light',
-  exit: 'collapse',
+  exit: 'stretch',
   blocks: [
     {
       type: 'text',

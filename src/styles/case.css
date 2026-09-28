@@ -187,6 +187,11 @@ main > .case > section {
   line-height: 1.35;
 }
 
+main > .case > .cblock-flow {
+  background: #161412;
+  color: #fbf8f5;
+}
+
 .cblock-flow {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -239,13 +244,58 @@ main > .case > section {
 }
 
 .phone--static {
-  position: relative;
-  inset: auto;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  translate: none;
   height: 100%;
+}
+
+/* Live site in a minimal browser frame. */
+.cblock-site .browser {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.18);
+}
+
+.browser__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #ececec;
+  color: #555;
+}
+
+.browser__bar i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cfcfcf;
+}
+
+.browser__url {
+  margin-left: 14px;
+  padding: 3px 12px;
+  background: #fff;
+  font-family: var(--f-mono);
+  font-size: 11px;
+}
+
+.cblock-site img {
+  width: 100%;
+  transition: scale 1.2s var(--ease-expo);
+}
+
+.cblock-site .browser:hover img {
+  scale: 1.02;
+}
+
+.cblock-site__caption {
+  margin-top: 14px;
+}
+
+.cblock-site__caption a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .cblock-launch a {

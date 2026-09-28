@@ -182,6 +182,11 @@ export function ProjectGallery() {
                 <div className="slide__sub">
                   <p className="meta">{p.subtitle}</p>
                   <p className="meta dim">{p.category}</p>
+                  {p.live && (
+                    <a className="meta slide__case" href={p.live} target="_blank" rel="noreferrer">
+                      {p.live.replace('https://', '')} ↗
+                    </a>
+                  )}
                   {p.external && (
                     <a
                       className="meta slide__case"
