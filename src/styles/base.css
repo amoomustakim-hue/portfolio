@@ -142,9 +142,11 @@ main {
 }
 
 .mask--char {
-  /* Headroom for accents (Ō) above tight display line-heights. */
-  padding: 0.32em 0 0.04em;
-  margin: -0.32em 0 -0.04em;
+  /* Headroom for accents (Ō) above tight display line-heights, and side room
+     so round glyphs (O, C, G) under negative tracking aren't sliced. The
+     negative margins keep layout identical. */
+  padding: 0.32em 0.1em 0.04em;
+  margin: -0.32em -0.1em -0.04em;
 }
 
 .word {
