@@ -3,7 +3,7 @@
 export const IDENTITY = {
   name: 'Mustakheem',
   fullName: 'Mustakheem Olamilekan Amoo',
-  alias: 'Yusuf Saheed',
+  alias: 'Olacodes',
   location: 'Lagos, Nigeria',
   coords: '6°27′N / 3°24′E',
   timeZone: 'Africa/Lagos',
