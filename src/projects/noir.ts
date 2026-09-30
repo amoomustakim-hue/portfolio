@@ -1,38 +1,49 @@
 import type { Project } from './types'
 
+const base = import.meta.env.BASE_URL
+const LIVE = 'https://noir-kappa-two.vercel.app'
+
 export const noir: Project = {
   slug: 'noir',
   scene: 'noir',
   title: 'Noir',
-  subtitle: 'GT — reveal campaign',
-  category: 'Automotive / Motion-led web',
+  subtitle: 'N/01 — a concept film in seven shots',
+  category: 'Automotive / Scroll-driven film',
   year: '2026',
-  tags: ['Motion', 'SVG', 'Scroll', 'Parallax'],
-  status: 'Concept',
-  role: ['Concept', 'Motion design', 'Illustration', 'Development'],
-  summary: 'A car revealed the way car launches are shot: one line of light at a time.',
-  statement: 'Most of the frame is black on purpose. The car is drawn only where light touches it — shoulder, roofline, wheel — and speed is suggested, never shown.',
-  palette: { bg: '#060606', fg: '#f2f2ee', accent: '#e23b2e' },
+  tags: ['Film', 'Scroll', 'GSAP', 'AI video'],
+  status: 'Live — concept',
+  role: ['Direction', 'Motion', 'Design', 'Development'],
+  summary: 'A car commercial you drive with the scroll wheel.',
+  statement: 'Seven shots, one car. Each chapter pins to the screen and the scroll becomes the playhead — scroll down and the car launches, scroll back and it rolls onto the grid again.',
+  palette: { bg: '#050505', fg: '#ededeb', accent: '#ff2a1a' },
   tone: 'dark',
   exit: 'shutter',
+  live: LIVE,
   blocks: [
     {
       type: 'text',
       label: 'Direction',
-      heading: 'Light painting, in the browser.',
-      body: 'A studio technique — dragging a strip light across a car in a dark room — rebuilt as vector motion. A sweep of light travels the body lines, the tail lamps hold the only colour, and the floor gives back a faint reflection.',
+      heading: 'Scroll is the playhead.',
+      body: 'Reveal, launch, heat, onboard, rain, driver, night. Every shot was generated, cut at its hard edges, graded to one look and encoded with a keyframe every twelve frames, so it seeks instantly in both directions. Over each one sits a live readout — start lights and a launch timer, disc temperature, speed and shift lights, a heart rate.',
     },
-    { type: 'scene', caption: 'The sweep — the car only exists where the light is.' },
-    { type: 'pull', text: 'Seen in passing.' },
+    {
+      type: 'site',
+      image: `${base}img/work/noir-site.jpg`,
+      href: LIVE,
+      url: 'noir-kappa-two.vercel.app',
+      caption: 'The trailer, then seven chapters under your scroll.',
+    },
+    { type: 'pull', text: 'Built in the dark.' },
     {
       type: 'specs',
       label: 'Build notes',
       items: [
-        ['Drawing', 'Hand-authored SVG body lines, masked by an animated light gradient'],
-        ['Motion', 'GSAP timelines; road streaks at three parallax speeds'],
-        ['Performance', 'No video, no WebGL — a few kilobytes of vector'],
-        ['Status', 'Self-initiated concept study'],
+        ['Footage', 'Seven AI-generated shots, trimmed at their cuts, one grade, a 2× motion-interpolated tunnel'],
+        ['Playback', 'Pinned chapters; scroll eases the playhead, and only seeks when the decoder is free'],
+        ['Encodes', '1080p and 720p, H.264 and VP9, 12-frame GOPs without B-frames'],
+        ['Stack', 'React, Vite, TypeScript, GSAP ScrollTrigger, Lenis'],
       ],
     },
+    { type: 'launch', href: LIVE, label: 'Watch N/01' },
   ],
 }

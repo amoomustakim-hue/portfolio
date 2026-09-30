@@ -2,13 +2,12 @@ import { lazy, Suspense } from 'react'
 import { useIsMobile, useReducedMotion } from '../../hooks/useMediaQuery'
 import type { Project } from '../../projects'
 import { AfterDarkScene } from './AfterDarkScene'
-import { NoirScene } from './NoirScene'
+import { FilmScene } from './FilmScene'
 import { ShanghaiScene } from './ShanghaiScene'
 import { WackowrldScene } from './WackowrldScene'
 import type { SceneProps } from './types'
 
 // Three.js scenes are split out of the main bundle and only load when shown.
-const AuraScene = lazy(() => import('./AuraScene'))
 const SomaScene = lazy(() => import('./SomaScene'))
 const CravvingssScene = lazy(() => import('./CravvingssScene'))
 
@@ -22,7 +21,7 @@ export function Scene({ project, playing, variant }: { project: Project } & Scen
   const reduced = useReducedMotion()
   const mobile = useIsMobile()
   const live = playing && !reduced
-  const webgl = project.scene === 'aura' || project.scene === 'soma' || project.scene === 'cravvingss'
+  const webgl = project.scene === 'soma' || project.scene === 'cravvingss'
 
   if (webgl && (reduced || mobile)) {
     return (
@@ -39,13 +38,14 @@ export function Scene({ project, playing, variant }: { project: Project } & Scen
     case 'wackowrld':
       return <WackowrldScene {...props} />
     case 'noir':
-      return <NoirScene {...props} />
+      return <FilmScene {...props} name="noir" caption="N/01 — a concept film in seven shots" />
+    case 'ami':
+      return <FilmScene {...props} name="ami" caption="ami — the house walkthrough" focus="50% 30%" />
     case 'afterDark':
       return <AfterDarkScene {...props} />
-    case 'aura':
     case 'soma':
     case 'cravvingss': {
-      const Lazy = project.scene === 'aura' ? AuraScene : project.scene === 'soma' ? SomaScene : CravvingssScene
+      const Lazy = project.scene === 'soma' ? SomaScene : CravvingssScene
       return (
         <Suspense fallback={<div className={`scene scene--${project.scene} scene--${variant}`} />}>
           <Lazy {...props} />
