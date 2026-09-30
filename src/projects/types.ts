@@ -1,4 +1,4 @@
-export type SceneKey = 'shanghai' | 'cravvingss' | 'wackowrld' | 'aura' | 'noir' | 'soma' | 'afterDark'
+export type SceneKey = 'shanghai' | 'cravvingss' | 'wackowrld' | 'ami' | 'noir' | 'soma' | 'afterDark'
 
 /** How the gallery leaves this project for the next one. */
 export type Exit = 'stretch' | 'expand' | 'slide' | 'shutter' | 'collapse'

@@ -357,85 +357,24 @@
   padding: 4px 8px;
 }
 
-/* Aura */
-.scene--aura {
-  background: radial-gradient(90% 90% at 50% 40%, #f6efe3 0%, #e7dcc9 55%, #cdbfa6 100%);
-  color: #1a1712;
+/* Live footage (Noir, ami) */
+.scene--film {
+  background: #050505;
 }
 
-.aura__word {
+.scene-film__shade {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: clamp(120px, 26vw, 500px);
-  font-weight: 200;
-  letter-spacing: -0.04em;
-  color: rgba(120, 90, 50, 0.09);
+  background:
+    radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(0, 0, 0, 0.45) 100%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent 28%, transparent 72%, rgba(0, 0, 0, 0.45));
 }
 
-.aura__glow {
-  position: absolute;
-  left: 50%;
-  top: 74%;
-  width: 40%;
-  height: 12%;
-  translate: -50% -50%;
-  background: radial-gradient(closest-side, rgba(120, 80, 30, 0.28), transparent);
-  filter: blur(8px);
-}
-
-.aura__caption {
+.scene-film__caption {
   position: absolute;
   left: 26px;
-  bottom: 22px;
-}
-
-/* Noir */
-.scene--noir {
-  background: radial-gradient(80% 60% at 50% 70%, #121212 0%, #050505 70%);
-}
-
-.noir__word {
-  position: absolute;
-  top: 8%;
-  left: 50%;
-  translate: -50% 0;
-  font-size: clamp(90px, 22vw, 420px);
-  font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 0.8;
-  color: rgba(255, 255, 255, 0.035);
-}
-
-.noir__car {
-  position: absolute;
-  left: 7%;
-  right: 7%;
-  top: 50%;
-  translate: 0 -46%;
-  width: 86%;
-  height: auto;
-}
-
-.noir__streaks {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.noir__streak {
-  position: absolute;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
-}
-
-.noir__spec {
-  position: absolute;
-  right: 26px;
-  bottom: 22px;
-  color: rgba(242, 242, 238, 0.6);
+  top: 22px;
+  color: #ece7df;
 }
 
 /* Sōma */
@@ -487,9 +426,8 @@
 .scene--hero .wck__tag,
 .scene--hero .crv__status,
 .scene--hero .ad__tracklist,
-.scene--hero .aura__caption,
-.scene--hero .soma__legend,
-.scene--hero .noir__spec {
+.scene--hero .scene-film__caption,
+.scene--hero .soma__legend {
   display: none;
 }
 
@@ -506,13 +444,7 @@
 
 /* Phones get a calmer composition inside the gallery frame. */
 @media (max-width: 767px) {
-  .soma__legend span:last-child,
-  .noir__spec {
+  .soma__legend span:last-child {
     display: none;
-  }
-  .noir__car {
-    left: -20%;
-    right: -20%;
-    width: 140%;
   }
 }

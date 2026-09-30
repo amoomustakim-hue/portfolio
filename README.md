@@ -34,14 +34,15 @@ Deploys to Vercel as-is (`vercel.json` sets the Vite build, SPA rewrites for
 | 01 | **Shanghai**, City Archive / 001 | The real timelapse; opens the live site | Live |
 | 02 | **Cravvingss**, the whole food business in one chat ([cravvingss.shop](https://cravvingss.shop)) | 3D phone running the real WhatsApp order thread, with the site's payment and rider cards | Live, Yaba |
 | 03 | **Wackowrld**, streetwear ([wackowrld.shop](https://wackowrld.shop)) | The live site's hero, with a VHS-style push-in | Live |
-| 04 | **Aura**, fragrance flagship | Real-time glass bottle (transmission, brass cap) refracting its backdrop | Concept |
-| 05 | **Noir**, automotive reveal | Light-painted SVG coupe, road streaks | Concept |
+| 04 | **ami**, The Art of Scent ([ami-one-rho.vercel.app](https://ami-one-rho.vercel.app)) | The boutique walkthrough from the live site, looping | Live |
+| 05 | **Noir**, N/01 — a concept film in seven shots ([noir-kappa-two.vercel.app](https://noir-kappa-two.vercel.app)) | The trailer, looping | Live — concept |
 | 06 | **Sōma**, architecture studio | Real-time concrete massing, moving sun, soft shadows | Concept |
 | 07 | **After Dark**, artist world | Audio-reactive canvas, synthesised Web Audio loop | Concept |
 
-Cravvingss and Wackowrld use screenshots of the live sites. The Cravvingss
-phone screen is drawn from the product's real WhatsApp messages. Everything
-else, apart from the Shanghai footage and the portrait, is generated in code.
+Cravvingss, Wackowrld, ami and Noir use screenshots and footage from the live
+sites. The Cravvingss phone screen is drawn from the product's real WhatsApp
+messages. Everything else, apart from the Shanghai footage and the portrait,
+is generated in code.
 There are no stock images. Fictional studies are labelled **Concept**
 throughout.
 
@@ -78,7 +79,7 @@ src/
 - three.js ships only in lazy chunks. The main bundle is about 140 KB gzipped.
 - Only the active gallery project and its neighbours are mounted, and only the
   active one animates. Canvases stop when off-screen.
-- On phones, the WebGL scenes (Aura, Sōma) show pre-rendered stills.
+- On phones, the WebGL scenes (Cravvingss, Sōma) show pre-rendered stills.
   Shanghai uses an AI-upscaled portrait crop.
 - `prefers-reduced-motion` removes Lenis, pinning, parallax and the 3D object.
   Projects stack statically.
