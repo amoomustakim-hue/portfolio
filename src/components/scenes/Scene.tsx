@@ -41,6 +41,8 @@ export function Scene({ project, playing, variant }: { project: Project } & Scen
       return <FilmScene {...props} name="noir" caption="N/01 — a concept film in seven shots" />
     case 'ami':
       return <FilmScene {...props} name="ami" caption="ami — the house walkthrough" focus="50% 30%" />
+    case 'asake':
+      return <FilmScene {...props} name="asake" caption="Asake — M$NEY, a fan concept" />
     case 'afterDark':
       return <AfterDarkScene {...props} />
     case 'soma':
