@@ -36,10 +36,11 @@ Deploys to Vercel as-is (`vercel.json` sets the Vite build, SPA rewrites for
 | 03 | **Wackowrld**, streetwear ([wackowrld.shop](https://wackowrld.shop)) | The live site's hero, with a VHS-style push-in | Live |
 | 04 | **ami**, The Art of Scent ([ami-one-rho.vercel.app](https://ami-one-rho.vercel.app)) | The boutique walkthrough from the live site, looping | Live |
 | 05 | **Noir**, N/01 — a concept film in seven shots ([noir-kappa-two.vercel.app](https://noir-kappa-two.vercel.app)) | The trailer, looping | Live — concept |
-| 06 | **Sōma**, architecture studio | Real-time concrete massing, moving sun, soft shadows | Concept |
-| 07 | **After Dark**, artist world | Audio-reactive canvas, synthesised Web Audio loop | Concept |
+| 06 | **Asake — M$NEY**, an unofficial fan concept ([mr-money-one.vercel.app](https://mr-money-one.vercel.app)) | The walking cut-out from the eras section, on the site's blue grid | Live — fan concept |
+| 07 | **Sōma**, architecture studio | Real-time concrete massing, moving sun, soft shadows | Concept |
+| 08 | **After Dark**, artist world | Audio-reactive canvas, synthesised Web Audio loop | Concept |
 
-Cravvingss, Wackowrld, ami and Noir use screenshots and footage from the live
+Cravvingss, Wackowrld, ami, Noir and Asake use screenshots and footage from the live
 sites. The Cravvingss phone screen is drawn from the product's real WhatsApp
 messages. Everything else, apart from the Shanghai footage and the portrait,
 is generated in code.
