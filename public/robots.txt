@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mustakheem.site/sitemap.xml
+Sitemap: https://www.mustakheem.site/sitemap.xml

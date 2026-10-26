@@ -98,7 +98,7 @@ The site is set up to rank for **"Mustakheem Amoo"**.
   `/work/:slug` page. It resets them when you return home.
 - `public/sitemap.xml` and `public/robots.txt` list the home page and every
   case study.
-- The canonical origin is `https://mustakheem.site`. The Vercel URL still
+- The canonical origin is `https://www.mustakheem.site`. The Vercel URL still
   works, and its canonical tags point Google to the domain. If the domain ever
   changes, set `VITE_SITE_URL` in Vercel and replace the URL in `index.html`,
   `public/sitemap.xml` and `public/robots.txt`.
