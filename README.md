@@ -86,3 +86,21 @@ src/
   Projects stack statically.
 - Semantic landmarks, skip link, visible focus, keyboard-operable menu,
   experiments and flow steps. The custom cursor is desktop-only.
+
+## SEO
+
+The site is set up to rank for **"Mustakheem Amoo"**.
+
+- `index.html` has the title, description, canonical URL, absolute Open Graph
+  and Twitter images, and JSON-LD (`WebSite` + `ProfilePage` + `Person`, with
+  alternate names, `sameAs`, awards and Cravvingss).
+- `src/utils/seo.ts` updates the title, description and canonical on each
+  `/work/:slug` page. It resets them when you return home.
+- `public/sitemap.xml` and `public/robots.txt` list the home page and every
+  case study.
+- The canonical origin is `https://portfolio-delta-wheat-77.vercel.app`. If you
+  move to a custom domain, set `VITE_SITE_URL` in Vercel and replace the URL in
+  `index.html`, `public/sitemap.xml` and `public/robots.txt`.
+- Add your LinkedIn, X and Instagram to `SOCIALS` in `src/config/site.ts` and
+  to `sameAs` in `index.html`. Google uses those links to tie your profiles to
+  your name.

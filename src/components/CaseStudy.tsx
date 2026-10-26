@@ -5,6 +5,7 @@ import { useInView } from '../hooks/useInView'
 import { useScrollScene } from '../hooks/useScrollScene'
 import { gsap } from '../utils/gsap'
 import { navigate } from '../utils/router'
+import { resetMeta, setMeta } from '../utils/seo'
 import { expandFrom, release } from '../utils/transition'
 import { ChatThread } from './scenes/cravvingss/ChatThread'
 import { STEPS } from './scenes/cravvingss/chat'
@@ -25,12 +26,12 @@ function Study({ project: p }: { project: Project }) {
   const next = nextProject(p.slug)
 
   useEffect(() => {
-    document.title = `${p.title} — Mustakheem`
+    setMeta({ title: `${p.title} — ${p.subtitle} | Mustakheem Amoo`, description: p.summary, path: `/work/${p.slug}` })
     // Let the page paint under the wipe before revealing it.
     const id = requestAnimationFrame(() => requestAnimationFrame(() => release()))
     return () => {
       cancelAnimationFrame(id)
-      document.title = 'Mustakheem — Creative Developer & Designer'
+      resetMeta()
     }
   }, [p])
 

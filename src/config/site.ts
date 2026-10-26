@@ -3,6 +3,8 @@
 export const IDENTITY = {
   name: 'Mustakheem',
   fullName: 'Mustakheem Olamilekan Amoo',
+  /** The name people search for: used in titles, meta and the About line. */
+  searchName: 'Mustakheem Amoo',
   alias: 'Olacodes',
   location: 'Lagos, Nigeria',
   coords: '6°27′N / 3°24′E',
@@ -21,6 +23,15 @@ export const SOCIALS: { label: string; handle: string; href: string }[] = [
   { label: 'GitHub', handle: '', href: '' },
   { label: 'Instagram', handle: '', href: '' },
 ]
+
+/** The canonical origin. Override with VITE_SITE_URL once a custom domain is live. */
+export const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://portfolio-delta-wheat-77.vercel.app').replace(/\/$/, '')
+
+export const SEO = {
+  title: 'Mustakheem Amoo — Creative Developer & Designer, Lagos',
+  description:
+    'Mustakheem Amoo (Olacodes) is a creative developer, designer and founder of Cravvingss, building immersive websites, products and interactive experiences from Lagos, Nigeria.',
+}
 
 export const LIVE_SOCIALS = SOCIALS.filter((s) => s.href)
 

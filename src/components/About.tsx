@@ -110,7 +110,7 @@ export function About() {
           <Mask
             as="p"
             className="about__bio-lead"
-            lines={[`I’m ${IDENTITY.name} — a creative developer`, 'and designer from Lagos, Nigeria.']}
+            lines={[`I’m ${IDENTITY.searchName} — a creative developer`, 'and designer from Lagos, Nigeria.']}
           />
           <p className="about__bio-body">
             I design and build digital products end to end — interfaces, backends and mobile apps — alongside interactive experiences and
