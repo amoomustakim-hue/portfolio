@@ -25,7 +25,7 @@ export const SOCIALS: { label: string; handle: string; href: string }[] = [
 ]
 
 /** The canonical origin. Override with VITE_SITE_URL once a custom domain is live. */
-export const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://portfolio-delta-wheat-77.vercel.app').replace(/\/$/, '')
+export const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://mustakheem.site').replace(/\/$/, '')
 
 export const SEO = {
   title: 'Mustakheem Amoo — Creative Developer & Designer, Lagos',

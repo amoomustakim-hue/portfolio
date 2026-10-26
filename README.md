@@ -98,9 +98,10 @@ The site is set up to rank for **"Mustakheem Amoo"**.
   `/work/:slug` page. It resets them when you return home.
 - `public/sitemap.xml` and `public/robots.txt` list the home page and every
   case study.
-- The canonical origin is `https://portfolio-delta-wheat-77.vercel.app`. If you
-  move to a custom domain, set `VITE_SITE_URL` in Vercel and replace the URL in
-  `index.html`, `public/sitemap.xml` and `public/robots.txt`.
+- The canonical origin is `https://mustakheem.site`. The Vercel URL still
+  works, and its canonical tags point Google to the domain. If the domain ever
+  changes, set `VITE_SITE_URL` in Vercel and replace the URL in `index.html`,
+  `public/sitemap.xml` and `public/robots.txt`.
 - Add your LinkedIn, X and Instagram to `SOCIALS` in `src/config/site.ts` and
   to `sameAs` in `index.html`. Google uses those links to tie your profiles to
   your name.
