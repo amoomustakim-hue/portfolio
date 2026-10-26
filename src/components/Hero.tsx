@@ -86,7 +86,7 @@ export function Hero({ ready }: { ready: boolean }) {
       <div className="hero__inner">
         <div className="hero__meta">
           <span className="hero__rule" aria-hidden="true" />
-          <Mask className="meta" lines={[<span data-scramble={`${IDENTITY.name} — Portfolio`}>{IDENTITY.name} — Portfolio</span>, <span className="dim">Index / 2026</span>]} />
+          <Mask className="meta" lines={[<span data-scramble={`${IDENTITY.searchName} — Portfolio`}>{IDENTITY.searchName} — Portfolio</span>, <span className="dim">Index / 2026</span>]} />
           <Mask className="meta hero__meta-mid" lines={[<span data-scramble="Creative developer">Creative developer</span>, <span className="dim">& designer</span>]} />
           <Mask
             className="meta hero__meta-right"
