@@ -10,7 +10,7 @@ export function AboutPage() {
   useEffect(() => {
     setMeta(
       `About ${IDENTITY.searchName}`,
-      `${IDENTITY.fullName} (${IDENTITY.alias}) is a creative developer and designer in Lagos: CEO of KIMTECH Technologies and Lead Software Engineer at SheDrives NG and Cravvingss.`,
+      `${IDENTITY.fullName} (${IDENTITY.alias}) is a software engineer in Lagos: CEO of KIMTECH Technologies and Lead Software Engineer at SheDrives NG and Cravvingss.`,
       '/about',
     )
   }, [])
@@ -39,7 +39,7 @@ export function AboutPage() {
               My full name is {IDENTITY.fullName}. Online I also go by {IDENTITY.alias}. I live and work in {IDENTITY.location}.
             </p>
             <p>
-              I'm a {IDENTITY.role.toLowerCase()} and designer. I like owning the whole thing: the server and the data, the WhatsApp bots people
+              I'm a software engineer, and I design too. I like owning the whole thing: the server and the data, the WhatsApp bots people
               actually talk to, the mobile app, and the interface on top. Most of what I build lives where people already are, which in Nigeria
               usually means WhatsApp.
             </p>

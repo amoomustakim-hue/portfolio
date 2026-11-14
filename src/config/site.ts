@@ -6,7 +6,7 @@ export const IDENTITY = {
   /** The name people search for: used in titles, meta and the About line. */
   searchName: 'Mustakheem Amoo',
   alias: 'Olacodes',
-  role: 'Creative developer',
+  role: 'Software Engineer',
   location: 'Lagos, Nigeria',
   timeZone: 'Africa/Lagos',
   email: 'amoomustakim@gmail.com',
@@ -25,9 +25,9 @@ export const LIVE_SOCIALS = SOCIALS.filter((s) => s.href)
 export const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://www.mustakheem.site').replace(/\/$/, '')
 
 export const SEO = {
-  title: 'Mustakheem Amoo, creative developer and designer in Lagos',
+  title: 'Mustakheem Amoo, Software Engineer in Lagos',
   description:
-    'Mustakheem Amoo (Olacodes) is a creative developer and designer in Lagos: CEO of KIMTECH Technologies, Lead Software Engineer at SheDrives NG and Cravvingss. Development, design, and a blog about what he builds each week.',
+    'Mustakheem Amoo (Olacodes) is a software engineer in Lagos: CEO of KIMTECH Technologies, Lead Software Engineer at SheDrives NG and Cravvingss. Development, design, and a blog about what he builds each week.',
 }
 
 /** Where he works now. */

@@ -12,7 +12,7 @@ export function About() {
             I build products end to end, and design websites that feel like places.
           </h2>
           <p className="about-text">
-            I'm {IDENTITY.fullName}, also known as {IDENTITY.alias}, a {IDENTITY.role.toLowerCase()} and designer in {IDENTITY.location}. I work on
+            I'm {IDENTITY.fullName}, also known as {IDENTITY.alias}, a software engineer in {IDENTITY.location}. I work on
             the whole thing: the server, the WhatsApp bots, the mobile app and the interface people actually touch.
           </p>
           <p className="about-text">

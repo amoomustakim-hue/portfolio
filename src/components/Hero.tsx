@@ -37,7 +37,7 @@ export function Hero() {
         </h1>
         <p className="hero-line">
           <span className="hero-dash" aria-hidden />
-          It's {IDENTITY.name}, a {IDENTITY.role.toLowerCase()} and designer in Lagos
+          It's {IDENTITY.name}, a software engineer in Lagos building products end to end
         </p>
 
         <a className="hero-scroll" href="#development">
