@@ -40,7 +40,12 @@ export const EXPERIENCE: { role: string; org: string; href: string; when?: strin
 /** Hackathons won. Four in all; the two named here are the ones on record so far. */
 export const HACKATHONS = {
   wins: 4,
-  named: ["Africa's Talking × Google Generative AI Hackathon", 'OpenMetadata Hackathon'],
+  /** Every win, with the place. The fourth is still to be added. */
+  list: [
+    { organiser: "Africa's Talking", event: 'Lagos edition', place: '1st place' },
+    { organiser: "Africa's Talking", event: 'Built for Hardware', place: 'Winner' },
+    { organiser: "Africa's Talking", event: 'Africa-wide competition', place: 'Winner' },
+  ],
 }
 
 export const SKILLS = {

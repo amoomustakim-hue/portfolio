@@ -36,15 +36,11 @@ export function Experience() {
 
       <h2 className="exp-title exp-title-2">Hackathons</h2>
       <ul className="exp-rows">
-        <li>
-          <span className="exp-when">{HACKATHONS.wins}× winner</span>
-          <span className="exp-what">Hackathons won in all</span>
-        </li>
-        {HACKATHONS.named.map((h) => (
-          <li key={h}>
-            <span className="exp-when">Winner</span>
+        {HACKATHONS.list.map((h) => (
+          <li key={h.event}>
+            <span className="exp-when">{h.place}</span>
             <span className="exp-what">
-              <Org name={h} />
+              {h.event} at <Org name={h.organiser} />
             </span>
           </li>
         ))}
