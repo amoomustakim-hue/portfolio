@@ -48,7 +48,10 @@ export function BlogPost({ slug }: { slug: string }) {
 }
 
 export function Missing() {
-  useEffect(() => setMeta(`Not found, ${IDENTITY.searchName}`, 'This page does not exist.', location.pathname), [])
+  useEffect(() => {
+    setMeta(`Not found, ${IDENTITY.searchName}`, 'This page does not exist.', location.pathname)
+    document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex')
+  }, [])
   return (
     <section className="page">
       <h1 className="page-title">Not here.</h1>

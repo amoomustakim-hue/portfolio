@@ -22,7 +22,7 @@ export const SOCIALS: { label: string; href: string }[] = [
 export const LIVE_SOCIALS = SOCIALS.filter((s) => s.href)
 
 /** The canonical origin. Override with VITE_SITE_URL if the domain changes. */
-export const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://www.mustakheem.site').replace(/\/$/, '')
+export const SITE_URL = (import.meta.env?.VITE_SITE_URL ?? 'https://www.mustakheem.site').replace(/\/$/, '')
 
 export const SEO = {
   title: 'Mustakheem Amoo, Software Engineer in Lagos',
