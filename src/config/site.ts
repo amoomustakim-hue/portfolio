@@ -37,14 +37,13 @@ export const EXPERIENCE: { role: string; org: string; href: string; when?: strin
   { role: 'Lead Software Engineer', org: 'Cravvingss', href: 'https://cravvingss.shop' },
 ]
 
-/** Hackathons won. Four in all; the two named here are the ones on record so far. */
+/** Hackathon placings, best first. */
 export const HACKATHONS = {
-  wins: 4,
-  /** Every win, with the place. The fourth is still to be added. */
   list: [
-    { organiser: "Africa's Talking", event: 'Lagos edition', place: '1st place' },
-    { organiser: "Africa's Talking", event: 'Built for Hardware', place: 'Winner' },
-    { organiser: "Africa's Talking", event: 'Africa-wide competition', place: 'Winner' },
+    { place: '1st place', name: "Africa's Talking Build with AI: Build with AT Hackathon" },
+    { place: '1st place', name: "Africa's Talking × Google Generative AI + APIs Hackathon" },
+    { place: '2nd place', name: '234 AI Hackathon × Commerce Fusion' },
+    { place: '3rd place', name: "Africa's Talking Build for Hardware Lagos Hackathon" },
   ],
 }
 

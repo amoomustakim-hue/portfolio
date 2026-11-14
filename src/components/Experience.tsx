@@ -37,10 +37,10 @@ export function Experience() {
       <h2 className="exp-title exp-title-2">Hackathons</h2>
       <ul className="exp-rows">
         {HACKATHONS.list.map((h) => (
-          <li key={h.event}>
+          <li key={h.name}>
             <span className="exp-when">{h.place}</span>
             <span className="exp-what">
-              {h.event} at <Org name={h.organiser} />
+              <Org name={h.name} />
             </span>
           </li>
         ))}

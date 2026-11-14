@@ -16,7 +16,7 @@ export function About() {
           </p>
           <p className="about-text">
             I run {EXPERIENCE[0].org} as {EXPERIENCE[0].role}, and I lead software engineering at {EXPERIENCE[1].org} and {EXPERIENCE[2].org}. I've
-            won {HACKATHONS.wins} hackathons along the way.
+            placed in {HACKATHONS.list.length} hackathons along the way, two of them in first place.
           </p>
         </div>
         <dl className="about-facts">

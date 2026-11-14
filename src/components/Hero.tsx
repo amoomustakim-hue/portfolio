@@ -1,4 +1,4 @@
-import { IDENTITY } from '../config/site'
+import { HACKATHONS, IDENTITY } from '../config/site'
 import { DESIGN, DEVELOPMENT } from '../content/work'
 
 /**
@@ -26,9 +26,9 @@ export function Hero() {
           </div>
           <div>
             <dt>
-              <sup>+</sup>4
+              <sup>+</sup>{HACKATHONS.list.length}
             </dt>
-            <dd>Hackathons won</dd>
+            <dd>Hackathon podiums</dd>
           </div>
         </dl>
 
