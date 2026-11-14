@@ -28,3 +28,9 @@ export const Chevron = () => (
     <path d="m9 6 6 6-6 6" />
   </svg>
 )
+export const UserIcon = () => (
+  <svg {...base}>
+    <circle cx="12" cy="8.5" r="3.8" />
+    <path d="M4.5 20c1.2-3.6 4-5.3 7.5-5.3s6.3 1.7 7.5 5.3" />
+  </svg>
+)

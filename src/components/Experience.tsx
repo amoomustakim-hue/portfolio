@@ -19,7 +19,7 @@ function Org({ name, href }: { name: string; href?: string }) {
 /** Work experience and hackathons as the reference's rows: when on the left, the role and a blue company pill on the right. */
 export function Experience() {
   return (
-    <section className="exp" id="about" aria-labelledby="exp-title">
+    <section className="exp" id="experience" aria-labelledby="exp-title">
       <h2 id="exp-title" className="exp-title">
         Work experience
       </h2>
