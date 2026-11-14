@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { About } from '../components/About'
+import { GitHubStats } from '../components/GitHubStats'
 import { Experience } from '../components/Experience'
 import { Help } from '../components/Help'
 import { PixelName } from '../components/PixelName'
@@ -18,6 +19,7 @@ export function Home() {
   return (
     <>
       <Hero />
+      <GitHubStats />
       <About />
       <WorkGrid id="development" title="Development" intro="Here's what I've been building" items={DEVELOPMENT} />
       <WorkGrid id="design" title="Design" intro="And what I've been designing" items={DESIGN} />

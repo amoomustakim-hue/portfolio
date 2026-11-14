@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from 'react'
 
-/** Home, /blog and /blog/:slug on the History API: enough for this site without a routing library. */
+/** Home, /about, /blog and /blog/:slug on the History API: enough for this site without a routing library. */
 const listeners = new Set<() => void>()
 const emit = () => listeners.forEach((l) => l())
 window.addEventListener('popstate', emit)
@@ -21,10 +21,11 @@ export function usePath() {
   )
 }
 
-export type Route = { page: 'home' } | { page: 'blog' } | { page: 'post'; slug: string } | { page: 'missing' }
+export type Route = { page: 'home' } | { page: 'about' } | { page: 'blog' } | { page: 'post'; slug: string } | { page: 'missing' }
 
 export function route(path: string): Route {
   if (path === '/' || path === '') return { page: 'home' }
+  if (/^\/about\/?$/.test(path)) return { page: 'about' }
   if (/^\/blog\/?$/.test(path)) return { page: 'blog' }
   const m = path.match(/^\/blog\/([^/]+)\/?$/)
   if (m) return { page: 'post', slug: decodeURIComponent(m[1]!) }

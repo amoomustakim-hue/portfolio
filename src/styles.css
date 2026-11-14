@@ -210,6 +210,303 @@ p {
   color: var(--grey);
 }
 
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* GitHub stats under the hero */
+.gh {
+  padding: 72px var(--pad) 0;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.gh-tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.gh-tiles-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.gh-tile {
+  padding: 24px 24px 22px;
+  border-left: 1px solid var(--line);
+}
+.gh-tile:first-child {
+  border-left: 0;
+}
+.gh-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+.gh-label svg {
+  width: 15px;
+  height: 15px;
+}
+.gh-num {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.gh-range {
+  font-size: 13px;
+  letter-spacing: 0;
+  color: var(--grey);
+}
+.gh-sub {
+  margin-top: 12px;
+  font-size: 13.5px;
+  color: var(--grey);
+}
+.gh-cal {
+  margin-top: 28px;
+}
+.gh-cal-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.gh-cal-scroll::-webkit-scrollbar {
+  display: none;
+}
+.gh-months,
+.gh-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(13px, 1fr);
+  gap: 4px;
+  min-width: 740px;
+}
+.gh-months span {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: var(--grey);
+  white-space: nowrap;
+  height: 18px;
+}
+.gh-week {
+  display: grid;
+  grid-template-rows: repeat(7, auto);
+  gap: 4px;
+}
+.gh-week i,
+.gh-key i {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: #f1f1f1;
+}
+.gh-week i:not([class]) {
+  background: #f7f7f7;
+  animation: gh-pulse 1.4s ease-in-out infinite alternate;
+}
+.gh-week i.gh-empty {
+  background: transparent;
+}
+i.l0 {
+  background: #f0f0f0;
+}
+i.l1 {
+  background: #cfcfcf;
+}
+i.l2 {
+  background: #9a9a9a;
+}
+i.l3 {
+  background: #5a5a5a;
+}
+i.l4 {
+  background: #111;
+}
+@keyframes gh-pulse {
+  to {
+    background: #eeeeee;
+  }
+}
+.gh-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: var(--grey);
+}
+.gh-foot a:hover {
+  color: var(--ink);
+}
+.gh-key {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.gh-key i {
+  width: 12px;
+}
+.about-more {
+  margin-top: 26px;
+}
+
+/* About page */
+.aboutp {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+.aboutp .gh {
+  padding: 100px 0 0;
+}
+.aboutp-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+}
+.aboutp-title {
+  font-size: clamp(36px, 4.6vw, 64px);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  padding-bottom: 48px;
+}
+.aboutp-portrait {
+  width: 100%;
+  max-width: 420px;
+  justify-self: end;
+  filter: grayscale(1);
+}
+.aboutp-sec {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 24px;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--line);
+}
+.aboutp-sec h2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.aboutp-text p {
+  font-size: 19px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+.aboutp-text p + p {
+  margin-top: 18px;
+}
+.aboutp-roles,
+.aboutp-how,
+.aboutp-work {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.aboutp-roles li + li {
+  margin-top: 28px;
+}
+.aboutp-role {
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.aboutp-note {
+  color: var(--grey);
+  margin-top: 6px;
+  max-width: 640px;
+}
+.aboutp-how {
+  counter-reset: how;
+}
+.aboutp-how li {
+  counter-increment: how;
+  position: relative;
+  padding-left: 44px;
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 720px;
+}
+.aboutp-how li + li {
+  margin-top: 18px;
+}
+.aboutp-how li::before {
+  content: '0' counter(how);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 13px;
+  color: var(--grey);
+}
+.aboutp-how strong {
+  font-weight: 500;
+}
+.aboutp-how a {
+  text-decoration: underline;
+}
+.aboutp-rows li:first-child {
+  padding-top: 0;
+}
+.aboutp-k {
+  font-size: 13px;
+  color: var(--grey);
+  margin: 0 0 10px;
+}
+.aboutp-k ~ .aboutp-k {
+  margin-top: 24px;
+}
+.aboutp-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.aboutp-chips span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 14.5px;
+}
+.aboutp-work li a {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr) 20px;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 17px;
+}
+.aboutp-work li:first-child a {
+  padding-top: 0;
+}
+.aboutp-work .aboutp-note {
+  margin: 0;
+  font-size: 15px;
+}
+.aboutp-work li a:hover > span:first-child {
+  text-decoration: underline;
+}
+
 /* Work grids (reference: two columns of rounded cards) */
 .work {
   padding: 120px var(--pad) 0;
@@ -847,6 +1144,54 @@ a.org:hover {
   }
   .about {
     padding-top: 88px;
+  }
+  .gh {
+    padding-top: 48px;
+  }
+  .gh-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .gh-tile {
+    padding: 18px 16px;
+  }
+  .gh-tile:nth-child(odd) {
+    border-left: 0;
+  }
+  .gh-tile:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+  .gh-num {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .gh-foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .aboutp-head {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .aboutp-title {
+    padding-bottom: 8px;
+  }
+  .aboutp-portrait {
+    justify-self: center;
+  }
+  .aboutp-sec {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 0;
+  }
+  .aboutp-text p {
+    font-size: 17px;
+  }
+  .aboutp-work li a {
+    grid-template-columns: minmax(0, 1fr) 20px;
+  }
+  .aboutp-work .aboutp-note {
+    grid-column: 1;
   }
   .about-grid {
     grid-template-columns: 1fr;

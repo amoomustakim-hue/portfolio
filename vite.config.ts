@@ -19,6 +19,7 @@ function sitemap(): Plugin {
       const newest = posts.map((p) => p.date).sort().pop() ?? new Date().toISOString().slice(0, 10)
       const urls = [
         { loc: '/', date: newest, priority: '1.0' },
+        { loc: '/about', date: newest, priority: '0.8' },
         { loc: '/blog', date: newest, priority: '0.8' },
         ...posts.map((p) => ({ ...p, priority: '0.6' })),
       ]

@@ -10,7 +10,7 @@ export function PillNav() {
         <HomeIcon />
       </a>
       <span className="pill-sep" />
-      <a href="/#about" onClick={onLink} aria-label="About me" title="About me">
+      <a href="/about" onClick={onLink} aria-label="About me" title="About me">
         <UserIcon />
       </a>
       <a href="/#development" onClick={onLink} aria-label="My work" title="My work">

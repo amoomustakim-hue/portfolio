@@ -4,6 +4,7 @@ import { PillNav } from './components/PillNav'
 import { route, usePath } from './lib/router'
 import { BlogIndex, BlogPost, Missing } from './pages/Blog'
 import { Home } from './pages/Home'
+import { AboutPage } from './pages/AboutPage'
 
 export default function App() {
   const path = usePath()
@@ -18,7 +19,7 @@ export default function App() {
       </a>
       <PillNav />
       <main id="main">
-        {r.page === 'home' ? <Home /> : r.page === 'blog' ? <BlogIndex /> : r.page === 'post' ? <BlogPost slug={r.slug} /> : <Missing />}
+        {r.page === 'home' ? <Home /> : r.page === 'about' ? <AboutPage /> : r.page === 'blog' ? <BlogIndex /> : r.page === 'post' ? <BlogPost slug={r.slug} /> : <Missing />}
       </main>
       <Contact />
     </>

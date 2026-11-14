@@ -1,3 +1,4 @@
+import { onLink } from '../lib/router'
 import { EXPERIENCE, HACKATHONS, IDENTITY, SKILLS } from '../config/site'
 
 /** About me: who I am in two short paragraphs, with the plain facts beside it. */
@@ -18,6 +19,9 @@ export function About() {
             I run {EXPERIENCE[0].org} as {EXPERIENCE[0].role}, and I lead software engineering at {EXPERIENCE[1].org} and {EXPERIENCE[2].org}. I've
             placed in {HACKATHONS.list.length} hackathons along the way, two of them in first place.
           </p>
+          <a className="wcard-btn about-more" href="/about" onClick={onLink}>
+            More about me <span aria-hidden>›</span>
+          </a>
         </div>
         <dl className="about-facts">
           <div>
