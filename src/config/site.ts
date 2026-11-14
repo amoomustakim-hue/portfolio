@@ -1,4 +1,4 @@
-/** Identity, links and copy that isn't tied to a single project. */
+/** Who this site is about, and the links and lines that aren't tied to one piece of work. */
 
 export const IDENTITY = {
   name: 'Mustakheem',
@@ -6,86 +6,44 @@ export const IDENTITY = {
   /** The name people search for: used in titles, meta and the About line. */
   searchName: 'Mustakheem Amoo',
   alias: 'Olacodes',
+  role: 'Creative developer',
   location: 'Lagos, Nigeria',
-  coords: '6°27′N / 3°24′E',
   timeZone: 'Africa/Lagos',
-  roles: ['Creative Developer', 'UI/UX Designer', 'Backend Developer', 'Mobile App Developer', 'Motion Designer', 'Founder'],
   email: 'amoomustakim@gmail.com',
 }
 
-/**
- * Social links. Fill in `href` (and `handle`) with your own profiles —
- * entries without an href are not rendered anywhere on the site.
- */
-export const SOCIALS: { label: string; handle: string; href: string }[] = [
-  { label: 'X', handle: '', href: '' },
-  { label: 'LinkedIn', handle: '', href: '' },
-  { label: 'GitHub', handle: '', href: '' },
-  { label: 'Instagram', handle: '', href: '' },
+/** Social links. Entries without an href are not shown anywhere. */
+export const SOCIALS: { label: string; href: string }[] = [
+  { label: 'GitHub', href: 'https://github.com/amoomustakim-hue' },
+  { label: 'X', href: '' },
+  { label: 'LinkedIn', href: '' },
+  { label: 'Instagram', href: '' },
 ]
+export const LIVE_SOCIALS = SOCIALS.filter((s) => s.href)
 
-/** The canonical origin. Override with VITE_SITE_URL once a custom domain is live. */
+/** The canonical origin. Override with VITE_SITE_URL if the domain changes. */
 export const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://www.mustakheem.site').replace(/\/$/, '')
 
 export const SEO = {
-  title: 'Mustakheem Amoo — Creative Developer & Designer, Lagos',
+  title: 'Mustakheem Amoo, creative developer and designer in Lagos',
   description:
-    'Mustakheem Amoo (Olacodes) is a creative developer, designer and founder of Cravvingss, building immersive websites, products and interactive experiences from Lagos, Nigeria.',
+    'Mustakheem Amoo (Olacodes) is a creative developer and designer in Lagos: CEO of KIMTECH Technologies, Lead Software Engineer at SheDrives NG and Cravvingss. Development, design, and a blog about what he builds each week.',
 }
 
-export const LIVE_SOCIALS = SOCIALS.filter((s) => s.href)
-
-/** The About sequence — one word per beat of the scroll. */
-export const DISCIPLINES = ['Design', 'Code', 'Motion', 'Product', 'Experiment', 'Build']
-
-export const RECORD = [
-  { value: '4×', label: 'Hackathon winner' },
-  { value: '01', label: "Africa's Talking × Google Generative AI — Winner" },
-  { value: '01', label: 'OpenMetadata Hackathon — Winner' },
-  { value: '→', label: 'Founder, Cravvingss' },
+/** Where he works now. */
+export const EXPERIENCE: { role: string; org: string; href: string; when?: string }[] = [
+  { role: 'CEO', org: 'KIMTECH Technologies Ltd', href: '' },
+  { role: 'Lead Software Engineer', org: 'SheDrives NG', href: 'https://shedrivesng.com' },
+  { role: 'Lead Software Engineer', org: 'Cravvingss', href: 'https://cravvingss.shop' },
 ]
 
-export const CAPABILITIES = [
-  {
-    index: '01',
-    title: ['Creative', 'Development'],
-    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Three.js', 'WebGL', 'GSAP'],
-  },
-  {
-    index: '02',
-    title: ['Backend'],
-    items: ['Node.js', 'NestJS', 'Python', 'PostgreSQL', 'MongoDB', 'Prisma', 'Supabase', 'APIs & payments'],
-  },
-  {
-    index: '03',
-    title: ['Mobile'],
-    items: ['App design', 'App development', 'iOS & Android', 'Chat-native products'],
-  },
-  {
-    index: '04',
-    title: ['Design'],
-    items: ['UI/UX', 'Visual Design', 'Interaction Design', 'Art Direction'],
-  },
-  {
-    index: '05',
-    title: ['Motion'],
-    items: ['Motion Graphics', 'Animation', 'Interactive Motion'],
-  },
-  {
-    index: '06',
-    title: ['Product'],
-    items: ['Product Design', 'Prototyping', 'Startup Development'],
-  },
-]
+/** Hackathons won. Four in all; the two named here are the ones on record so far. */
+export const HACKATHONS = {
+  wins: 4,
+  named: ["Africa's Talking × Google Generative AI Hackathon", 'OpenMetadata Hackathon'],
+}
 
-export const EXPERIMENTS = [
-  { id: 'field', index: 'E01', title: 'Field', note: 'A grid that gets out of your way.' },
-  { id: 'form', index: 'E02', title: 'Form', note: 'Low-poly object, drag to turn.' },
-  { id: 'weight', index: 'E03', title: 'Weight', note: 'Type that thickens where you look.' },
-  { id: 'displace', index: 'E04', title: 'Displace', note: 'A still of Shanghai, bent by the cursor.' },
-  { id: 'swarm', index: 'E05', title: 'Swarm', note: 'Four thousand points, one repulsor.' },
-] as const
-
-export type ExperimentId = (typeof EXPERIMENTS)[number]['id']
-
-export const SHANGHAI_URL = 'https://shanghai-city.vercel.app'
+export const SKILLS = {
+  Development: ['React', 'Next.js', 'TypeScript', 'Node.js', 'NestJS', 'Fastify', 'PostgreSQL', 'Prisma', 'React Native', 'Three.js', 'GSAP'],
+  Design: ['UI/UX', 'Interaction design', 'Motion', 'Art direction', 'Prototyping'],
+}
